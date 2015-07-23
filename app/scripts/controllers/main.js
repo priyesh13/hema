@@ -14,4 +14,6 @@ angular.module('hemaApp')
       'AngularJS',
       'Karma'
     ];
+
+    $('body').scrollspy({ target: '#navbar-example' })
   });
