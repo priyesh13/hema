@@ -1,32 +1,21 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name hemaApp
- * @description
- * # hemaApp
- *
- * Main module of the application.
- */
 angular
-  .module('hemaApp', [
-    'ngAnimate',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
+  .module('hemaApp', ['ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/home.html',
+        controller: 'mainController'
+      })
+
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'aboutController'
+      })
+
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'contactController'
       });
-      // .when('/about', {
-      //   templateUrl: 'views/about.html',
-      //   controller: 'AboutCtrl'
-      // })
-      // .otherwise({
-      //   redirectTo: '/'
-      // });
   });
