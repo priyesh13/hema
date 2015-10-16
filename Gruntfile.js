@@ -308,10 +308,10 @@ module.exports = function (grunt) {
     'wiredep',
     'concurrent:dist',
     'autoprefixer',
-    'concat',
+    // 'concat',
     'copy:dist',
-    'cssmin',
-    'uglify',
+    // 'cssmin',
+    // 'uglify',
     'htmlmin'
   ]);
 
