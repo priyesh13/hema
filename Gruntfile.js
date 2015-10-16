@@ -271,6 +271,16 @@ module.exports = function (grunt) {
         'compass:dist',
         'imagemin'
       ]
+    },
+
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['app/scripts/app.js', 'app/scripts/controllers/*'],
+        dest: 'dist/built.js',
+      }
     }
 
   });
@@ -308,7 +318,7 @@ module.exports = function (grunt) {
     'wiredep',
     'concurrent:dist',
     'autoprefixer',
-    // 'concat',
+    'concat',
     'copy:dist',
     // 'cssmin',
     // 'uglify',
